@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "Shoes"
+  "defaultProject": "Shoes",
+  "cli": {
+    "analytics": false
+  }
 }

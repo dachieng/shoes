@@ -1,0 +1,38 @@
+#first{
+background-image:url("/assets/images/image1.jpg");
+height: 100vh;
+}
+#second{
+  background-image:url("/assets/images/image3.jpg");
+  height: 60vh;
+  }
+#third{
+    background-image:url("/assets/images/image2.jpg");
+    height: 100vh;
+}
+
+.image{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+}
+.light{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 0;
+}
+.dark{
+  background-color: black;
+  padding: 10px;
+  margin: 0;
+}
+h4{
+  text-align: center;
+  padding-top: 20%;
+  font-size: 50px;
+}
+#button{
+  text-align: center;
+
+}
