@@ -33,7 +33,7 @@
         </tr>
       </thead>
       <tbody  *ngIf = "shoes && shoes.length">
-        <tr *ngFor = "let shoe of shoes">
+        <tr *ngFor = "let shoe of filteredList">
           <td>
             <img [src]="shoe.imageUrl" *ngIf="showImage" [style.width.px]="imageWidth" [style.margin.px]="imageMargin" [style.height.px]="imageHeight">
           </td>

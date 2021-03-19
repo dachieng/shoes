@@ -8,7 +8,9 @@ import { IShoe } from './shoe';
 })
 export class ShoeListComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.filteredList = this.shoes
+  }
 
   ngOnInit(): void {
   }
@@ -17,7 +19,21 @@ imageMargin:number = 5
 imageHeight:number = 100
 showImage:boolean=true;
 
-listFilter:string = "Heel"
+
+filteredList:IShoe[]
+
+_listFilter:string;
+
+set listFilter(value){
+  this._listFilter = value
+  this.filteredList = this.listFilter ? this.performFilter(this.listFilter) : this.shoes
+}
+
+get listFilter():string{
+  return this._listFilter
+}
+
+
 
 
   shoes:IShoe[] = [
@@ -98,5 +114,9 @@ toggleImage(){
   this.showImage = !this.showImage
 }
 
+performFilter(filterBy:string):IShoe[]{
+  filterBy = filterBy.toLocaleLowerCase()
+  return this.shoes.filter((shoe:IShoe)=> shoe.name.toLocaleLowerCase().indexOf(filterBy) !== -1)
+}
 
 }
