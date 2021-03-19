@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { IShoe } from '../shoe-list/shoe';
 
 @Injectable({
@@ -8,8 +9,11 @@ export class ShoesService {
 
   constructor() { }
 
-  getShoes():IShoe[]{
-    return shoes
+  subject = new Subject()
+  getShoes(){
+    //return shoes
+    setTimeout(()=> {this.subject.next(shoes); this.subject.complete()},100)
+    return this.subject
   }
 }
 

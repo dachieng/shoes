@@ -19,10 +19,10 @@ imageMargin:number = 5
 imageHeight:number = 100
 showImage:boolean=true;
 title:string;
-shoes:IShoe[]
+shoes
 
 
-filteredList:IShoe[]
+filteredList:any[]
 
 _listFilter:string;
 
@@ -37,8 +37,11 @@ get listFilter():string{
 
 ngOnInit(): void {
 
-  this.shoes = this.shoeService.getShoes()
-  this.filteredList = this.shoes
+  //this.shoes = this.shoeService.getShoes()
+  this.shoeService.getShoes().subscribe(shoes => {this.shoes = shoes;
+    this.filteredList = this.shoes
+
+  })
 
 }
 
