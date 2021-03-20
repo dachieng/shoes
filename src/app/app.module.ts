@@ -13,6 +13,7 @@ import { ShoeDetailsComponent } from './shoe-details/shoe-details.component';
 import { ErrorsComponent } from './errors/errors.component';
 import { RouteActivationService } from './shared/route-activation.service';
 import { RouteDeactivationService } from './shared/route-deactivation.service';
+import { RouteResolveService } from './shared/route-resolve.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { RouteDeactivationService } from './shared/route-deactivation.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [RouteActivationService, RouteDeactivationService],
+  providers: [RouteActivationService, RouteDeactivationService, RouteResolveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ShoesService } from '../shared/shoes.service';
 import { IShoe } from './shoe';
 
@@ -9,7 +10,7 @@ import { IShoe } from './shoe';
 })
 export class ShoeListComponent implements OnInit {
 
-  constructor(private shoeService:ShoesService) {
+  constructor(private shoeService:ShoesService, private route:ActivatedRoute) {
   }
 
 
@@ -37,18 +38,15 @@ get listFilter():string{
 
 ngOnInit(): void {
 
-  //this.shoes = this.shoeService.getShoes()
-  this.shoeService.getShoes().subscribe(shoes => {this.shoes = shoes;
-    this.filteredList = this.shoes
+  this.shoes = this.route.snapshot.data['shoeResolve']
+  this.filteredList = this.shoes
 
-  })
+
+  //this.shoes = this.shoeService.getShoes()
+  //this.shoeService.getShoes().subscribe(shoes => {this.shoes = shoes;
+  //this.filteredList = this.shoes })
 
 }
-
-
-
-
-
 
 toggleImage(){
   this.showImage = !this.showImage
