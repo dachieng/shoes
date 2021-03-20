@@ -8,3 +8,7 @@ nav.navbar{
   color: white;
   font-weight:bold;
 }
+li>a.active{
+  color: rgb(240, 158, 6) !important;
+
+}
