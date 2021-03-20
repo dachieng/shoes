@@ -10,6 +10,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ConverToSpacePipe } from './shared/conver-to-space.pipe';
 import { StarComponent } from './star/star.component';
 import { ShoeDetailsComponent } from './shoe-details/shoe-details.component';
+import { ErrorsComponent } from './errors/errors.component';
+import { RouteActivationService } from './shared/route-activation.service';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,15 @@ import { ShoeDetailsComponent } from './shoe-details/shoe-details.component';
     WelcomeComponent,
     ConverToSpacePipe,
     StarComponent,
-    ShoeDetailsComponent
+    ShoeDetailsComponent,
+    ErrorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [RouteActivationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,11 @@
+.card{
+  background-color: #2e4053;
+
+}
+
+.errorMessage{
+  font-size: 170px;
+  text-align: center;
+  margin-top: 150px;
+  height: 100vh !important;
+}
