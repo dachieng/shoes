@@ -12,6 +12,7 @@ import { StarComponent } from './star/star.component';
 import { ShoeDetailsComponent } from './shoe-details/shoe-details.component';
 import { ErrorsComponent } from './errors/errors.component';
 import { RouteActivationService } from './shared/route-activation.service';
+import { RouteDeactivationService } from './shared/route-deactivation.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { RouteActivationService } from './shared/route-activation.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [RouteActivationService],
+  providers: [RouteActivationService, RouteDeactivationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

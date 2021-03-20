@@ -9,6 +9,7 @@ import { ShoesService } from '../shared/shoes.service';
 })
 export class ShoeDetailsComponent implements OnInit {
   shoe:any
+  isDirty:boolean = true
 
   constructor(private route : ActivatedRoute, private shoeService : ShoesService, private router: Router) { }
 
