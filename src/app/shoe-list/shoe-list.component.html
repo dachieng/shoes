@@ -37,7 +37,7 @@
           <td>
             <img [src]="shoe.imageUrl" *ngIf="showImage" [style.width.px]="imageWidth" [style.margin.px]="imageMargin" [style.height.px]="imageHeight">
           </td>
-          <td>{{shoe.name}}</td>
+          <td [routerLink] = "['/shoes', shoe.id]"> <a>{{shoe.name}}</a> </td>
           <td>{{shoe.code | uppercase | converToSpace:"-"}}</td>
           <td>{{shoe.price | currency}}</td>
           <td>{{shoe.release_date | date}}</td>

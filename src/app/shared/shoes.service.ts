@@ -15,6 +15,10 @@ export class ShoesService {
     setTimeout(()=> {this.subject.next(shoes); this.subject.complete()},100)
     return this.subject
   }
+
+  getShoe(id:number){
+    return shoes.find(shoe => shoe.id === id)
+  }
 }
 
 const shoes:IShoe[] = [

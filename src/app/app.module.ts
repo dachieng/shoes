@@ -9,6 +9,7 @@ import { NavComponent } from './nav/nav.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ConverToSpacePipe } from './shared/conver-to-space.pipe';
 import { StarComponent } from './star/star.component';
+import { ShoeDetailsComponent } from './shoe-details/shoe-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StarComponent } from './star/star.component';
     NavComponent,
     WelcomeComponent,
     ConverToSpacePipe,
-    StarComponent
+    StarComponent,
+    ShoeDetailsComponent
   ],
   imports: [
     BrowserModule,

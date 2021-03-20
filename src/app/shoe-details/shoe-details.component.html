@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header">
+    <h4>{{shoe.name}}</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <img [src]="shoe.imageUrl">
+      </div>
+      <div class="col-sm-6">
+        <div><strong>Name : &nbsp;</strong>{{shoe.name}}</div>
+        <div><strong>Code : &nbsp;</strong>{{shoe.code | uppercase | converToSpace:"-"}}</div>
+        <div><strong>Price : &nbsp;</strong>{{shoe.price}}</div>
+        <div><strong>Release Date : &nbsp;</strong>{{shoe.release_date | date}}</div>
+        <div><strong>Rating</strong>
+          <span><shoes-star></shoes-star></span>
+        </div>
+        <div><strong>Description : &nbsp;</strong>{{shoe.description}}</div>
+
+
+
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-sm-2">
+        <button class="btn btn-outline-light" (click) = "back()">
+          <<
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
